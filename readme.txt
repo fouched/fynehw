@@ -16,7 +16,7 @@ https://docs.fyne.io/started/
 
 Follow the instructions
 
-Note: do the last step to add compiler (MSYS2 MINGW64) to the path.
+Note: DO run the last step to add compiler (MSYS2 MINGW64) to the path.
 This makes working in GoLand / IntelliJ so MUCH easier
 
 Below the export for my environment:
