@@ -1,10 +1,12 @@
 package main
 
 import (
+	"fmt"
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/widget"
+	"time"
 )
 
 type App struct {
@@ -21,7 +23,18 @@ func main() {
 
 	w.SetContent(container.NewVBox(output, entry, btn))
 	w.Resize(fyne.Size{Width: 500, Height: 500})
+	go running(a)
 	w.ShowAndRun()
+	tidyUp()
+}
+
+func running(a fyne.App) {
+	time.Sleep(5 * time.Second)
+	a.Quit()
+}
+
+func tidyUp() {
+	fmt.Println("Exited")
 }
 
 func (app *App) makeUI() (*widget.Label, *widget.Entry, *widget.Button) {
