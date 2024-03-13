@@ -1,6 +1,8 @@
 Open Powershell in admin mode
 
-Run Get-ExecutionPolicy. If it returns Restricted, then run Set-ExecutionPolicy AllSigned
+> Get-ExecutionPolicy
+If it returns Restricted, then
+> Set-ExecutionPolicy AllSigned
 
 If it returns Restricted, then run Set-ExecutionPolicy AllSigned
 
@@ -14,9 +16,10 @@ choco install make
 
 https://docs.fyne.io/started/
 
-Follow the instructions
+Follow the instructions, choosing the recommended MSYS2 as the C compiler
 
-Note: DO run the last step to add compiler (MSYS2 MINGW64) to the path.
+Note:
+DO run the last step to add compiler (MSYS2 MINGW64) to the path.
 This makes working in GoLand / IntelliJ so MUCH easier
 
 Below the export for my environment:
